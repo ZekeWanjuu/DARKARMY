@@ -373,10 +373,9 @@ def scanusers():
         if '/' in users:
             users = users.replace('/', '')
         while len(users) > 2:
-            print  (users
+            print  ('users
             resp = urllib2.urlopen(
-                site + '/cgi-sys/guestbook.cgi?user=%s' % users).read()
-		   )
+                site + '/cgi-sys/guestbook.cgi?user=%s' % users).read()')
 
             if 'invalid username' not in resp.lower():
                 print "\tFound -> %s" % users
